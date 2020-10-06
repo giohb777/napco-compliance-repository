@@ -1,0 +1,361 @@
+[
+  {
+    "qInfo": {
+      "qId": "2d3dc206-ab49-41e4-b8c3-d877999f11a0",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vBusinessGroupId",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "1221"
+  },
+  {
+    "qInfo": {
+      "qId": "3491b82f-2349-4a4a-80c8-539fd73cce35",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v_Female_P",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "count({<[Active Flag] = {'Yes'},\r\n        [Effective Date] = {\">=$(=date($(vEOMFilterDate)))\"},\n        [Gender] = {'Female'}\n>} distinct [Employee Number])\n/\ncount({<[Active Flag] = {'Yes'},\n        [Effective Date] = {\">=$(=date($(vEOMFilterDate)))\"}\n>} distinct [Employee Number]) ",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "3737bae4-fe99-4bfe-87ec-ec2faee2c830",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vNatSpecialNeedsPercentageCeiling",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "rangemin($(vNatSpecialNeedsCount) / $(vNatSpecialCasesCount), 0.1)",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "385fe827-f6da-42a4-a794-595376e57668",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vEOMFilterDate",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "=Max(All{<Year=P(Year),Quarter=P(Quarter),[Month Year]=P([Month Year]),[Month Num]=P([Month Num]),Month=P(Month),Day=P(Day)>}Num([Master Calendar Date]))",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "3ce8abc8-6ab5-4e53-ab80-18d34ba20599",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vNatSpecialCasesCount",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "sum({<[Active Flag] = {'Yes'},\n      [Effective Date] = {\">=$(=date($(vEOMFilterDate)))\"},\n      [Nationalization Category] = {'Special Needs', 'Student', 'Released Prisoner', 'Saudi Arabian'}\n>} [Salary Nationalization Ratio])",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "40cfe169-51ae-4611-ae6f-b4a75f2eeb4c",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v_Nationals_Ratio",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "((($(vNatNormalCasesCount)\r\n+ (($(vNatSpecialNeedsCountCeiling) * 4) + $(vNatSpecialNeedsCount) - $(vNatSpecialNeedsCountCeiling))\n+ (($(vNatPrisonersCountCeiling) * 2) + $(vNatPrisonersCount) - $(vNatPrisonersCountCeiling))\n+ (($(vNatStudentsCountCeiling)) + $(vNatStudentsCount) - $(vNatStudentsCountCeiling))))\n/\n($(vNatExpatCount)\n+ $(vNatContractDailyHiredCount)\n+ ($(vNatNormalCasesCount)\n+ (($(vNatSpecialNeedsCountCeiling) * 4) + $(vNatSpecialNeedsCount) - $(vNatSpecialNeedsCountCeiling))\n+ (($(vNatPrisonersCountCeiling) * 2) + $(vNatPrisonersCount) - $(vNatPrisonersCountCeiling))\n+ (($(vNatStudentsCountCeiling)) + $(vNatStudentsCount) - $(vNatStudentsCountCeiling)))))",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "535f6219-91b6-42e8-9b3d-8bba4f121a0f",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vNatSpecialNeedsCountCeiling",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "rangemin($(vNatSpecialNeedsCount) / $(vNatSpecialCasesCount), 0.1) * $(vNatSpecialCasesCount)",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "53f0f9f5-31e2-4fd6-b121-9049a7a6dc3f",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vTop25FloorSalary",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "Aggr(distinct if(Rank(Max( {<[Active Flag] = {'Yes'} , [Effective Date] = {\">=$(=date($(vEOMFilterDate)))\"} >} [Salary Actual Amount])) =  Floor($(=Num($(vTop25DistinctSalaries)))) ,\r\n\nMax( {<[Active Flag] = {'Yes'} , [Effective Date] = {\">=$(=date($(vEOMFilterDate)))\"} >} [Salary Actual Amount])),[Salary Actual Amount])\n\n",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "5cd144b3-86f5-45ff-82bc-64a41c714205",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vNatExpatCount",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "count({<[Active Flag] = {'Yes'},\r\n      [Effective Date] = {\">=$(=date($(vEOMFilterDate)))\"},\n      [Nationalization Category] = {'Expat'}\n>} distinct [Employee Number])",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "5e11d0a0-9d7c-4324-ae98-ea8a8c9320c3",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vNatStudentsCountCeiling",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "rangemin($(vNatStudentsPercentageCeiling), 0.15 - $(vNatSpecialNeedsPercentageCeiling) - $(vNatPrisonersPercentageCeiling)) * $(vNatSpecialCasesCount)",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "7b542256-b457-4945-966f-3ddcad3ef017",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vNatStudentsPercentageCeiling",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "rangemin($(vNatStudentsCount) / $(vNatSpecialCasesCount), 0.1)",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "862b0028-46b6-4476-9ea7-55b564ee4cca",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v_Selected_HR_Measure",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "1",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "aec74572-f700-4a1c-81ae-5261d425ddb3",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vNatPrisonersCountCeiling",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "rangemin($(vNatPrisonersPercentageCeiling), 0.15 - $(vNatSpecialNeedsPercentageCeiling)) * $(vNatSpecialCasesCount)",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "bb1fc7c9-fdca-4ddc-b7dc-23818a4be371",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vNatContractDailyHiredCount",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "count({<[Active Flag] = {'Yes'},\n      [Effective Date] = {\">=$(=date($(vEOMFilterDate)))\"},\n      [Nationalization Category] = {'Contract Daily Hired'}\n>} distinct [Employee Number])",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "bddeb231-66ec-4f8d-9246-156b3980d3f9",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vNatStudentsCount",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "sum({<[Active Flag] = {'Yes'},\r\n      [Effective Date] = {\">=$(=date($(vEOMFilterDate)))\"},\n      [Nationalization Category] = {'Student'}\n>} [Salary Nationalization Ratio])",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "c4ad7540-be5c-4dce-9da6-00bdbf8dfae5",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vNatNormalCasesCount",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "sum({<[Active Flag] = {'Yes'},\n      [Effective Date] = {\">=$(=date($(vEOMFilterDate)))\"},\n      [Nationalization Category] = {'Saudi Arabian', 'GCC', 'Wafed Khas', 'Kabael Naziha'}\n>} [Salary Nationalization Ratio])",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "d2c02a9c-2cb2-4904-a463-e5c07b867ac3",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vBOMFilterDate",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "=RangeMax(\r\nmonthstart(Min(All{<Year=P(Year),Quarter=P(Quarter),[Month Year]=P([Month Year]),[Month Num]=P([Month Num]),Month=P(Month),Day=P(Day)>}Num([Master Calendar Date])))\n,yearstart($(vEOMFilterDate)))",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "d644539c-74f6-45f3-b527-5228d3476011",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v_Seniority",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "(avg({<[Active Flag] = {'Yes'},\r\n      [Effective Date] = {\">=$(=date($(vEOMFilterDate)))\"}\n>} aggr(max([Group Tenure]),[Employee Number])))",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "e42480c6-d047-42a8-9473-28fd5bbda8c5",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vNatPrisonersPercentageCeiling",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "rangemin($(vNatPrisonersCount) / $(vNatSpecialCasesCount), 0.1)",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "e6c7a6b0-491c-43e6-b2a3-3d03b336a1fa",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v_Avg_Saudis_Salaries",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "(avg({<[Active Flag] = {'Yes'},\r\n      [Effective Date] = {\">=$(=date($(vEOMFilterDate)))\"},\n      [Nationality] = {'Saudi Arabian'}\n>} aggr(max([Salary Actual Amount]),[Employee Number])))",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "ece272e6-d334-44a3-ba7c-f58bf547d27a",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vTop25DistinctSalaries",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "(Count(Distinct {<[Active Flag] = {'Yes'},\r\n      [Effective Date] = {\">=$(=date($(vEOMFilterDate)))\"}\n>} aggr(max([Salary Actual Amount]),[Employee Number]))*0.25)",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "edf1cf20-1abd-4e33-ad26-a100657b8afa",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vNatSpecialNeedsCount",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "sum({<[Active Flag] = {'Yes'},\n      [Effective Date] = {\">=$(=date($(vEOMFilterDate)))\"},\n      [Nationalization Category] = {'Special Needs'}\n>} [Salary Nationalization Ratio])",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "fbe4e947-ee23-4d7d-bc19-c3776bf737b0",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v_High_Paid_Saudis",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "((-Sum(Aggr(Sum( { <[Active Flag] = {'Yes'}, [Effective Date] = {\">=$(=date($(vEOMFilterDate)))\"} , [Nationality] = {'Saudi Arabian'}  > } [Salary Actual Amount]), [Employee Number]) > $(=Num($(vTop25FloorSalary)))))\r\n\n/\n\n\nCount({<[Active Flag] = {'Yes'},\n      [Effective Date] = {\">=$(=date($(vEOMFilterDate)))\"},\n      [Nationality] = {'Saudi Arabian'}\n>} distinct [Employee Number] ))",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "fc96c133-904e-4e8b-8021-674825875430",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vNatPrisonersCount",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "sum({<[Active Flag] = {'Yes'},\n      [Effective Date] = {\">=$(=date($(vEOMFilterDate)))\"},\n      [Nationalization Category] = {'Released Prisoner'}\n>} [Salary Nationalization Ratio])",
+    "tags": []
+  }
+]

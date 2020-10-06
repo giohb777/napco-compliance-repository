@@ -1,0 +1,1110 @@
+[
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$Field",
+    "qCardinal": 89,
+    "qTags": [
+      "$ascii",
+      "$text",
+      "$key",
+      "$hidden",
+      "$system"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$FieldNo",
+    "qCardinal": 20,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$hidden",
+      "$system"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$Fields",
+    "qCardinal": 8,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$hidden",
+      "$system"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$Info",
+    "qCardinal": 1,
+    "qTags": [
+      "$ascii",
+      "$text",
+      "$hidden",
+      "$system"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$Rows",
+    "qCardinal": 9,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$hidden",
+      "$system"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$Table",
+    "qCardinal": 9,
+    "qTags": [
+      "$ascii",
+      "$text",
+      "$key",
+      "$hidden",
+      "$system"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qName": "%DateID",
+    "qCardinal": 70,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Master_Calendar"
+    ]
+  },
+  {
+    "qName": "Day",
+    "qCardinal": 5,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Master_Calendar"
+    ]
+  },
+  {
+    "qName": "Description",
+    "qCardinal": 29,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "CostCenterMapping"
+    ]
+  },
+  {
+    "qName": "Effective Date",
+    "qCardinal": 70,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "Master_Calendar"
+    ]
+  },
+  {
+    "qName": "Effective_Date",
+    "qCardinal": 70,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "Master_Calendar"
+    ]
+  },
+  {
+    "qName": "Effective_Date_YYYYMMDD",
+    "qCardinal": 70,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "Master_Calendar"
+    ]
+  },
+  {
+    "qName": "KPI Effective Date",
+    "qCardinal": 70,
+    "qTags": [
+      "$numeric",
+      "$timestamp"
+    ],
+    "qSrcTables": [
+      "Master_Calendar"
+    ]
+  },
+  {
+    "qName": "Key",
+    "qCardinal": 25,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "CostCenterMapping"
+    ]
+  },
+  {
+    "qName": "Master Calendar Date",
+    "qCardinal": 70,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "Master_Calendar"
+    ]
+  },
+  {
+    "qName": "Master Calendar Date Num",
+    "qCardinal": 70,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "Master_Calendar"
+    ]
+  },
+  {
+    "qName": "Month",
+    "qCardinal": 12,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Master_Calendar"
+    ]
+  },
+  {
+    "qName": "Month Day",
+    "qCardinal": 14,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Master_Calendar"
+    ]
+  },
+  {
+    "qName": "Month ID",
+    "qCardinal": 70,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Master_Calendar"
+    ]
+  },
+  {
+    "qName": "Month Num",
+    "qCardinal": 12,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Master_Calendar"
+    ]
+  },
+  {
+    "qName": "Month Year",
+    "qCardinal": 70,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "Master_Calendar"
+    ]
+  },
+  {
+    "qName": "Puelse Organization Id2",
+    "qCardinal": 2038,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Organizations"
+    ]
+  },
+  {
+    "qName": "Pulse Active Flag",
+    "qCardinal": 2,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Employee_Monthly"
+    ]
+  },
+  {
+    "qName": "Pulse Area",
+    "qCardinal": 2,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Organizations"
+    ]
+  },
+  {
+    "qName": "Pulse Assignment EDate",
+    "qCardinal": 1771,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Assignments"
+    ]
+  },
+  {
+    "qName": "Pulse Assignment Effective Key",
+    "qCardinal": 322544,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Employee_Monthly"
+    ]
+  },
+  {
+    "qName": "Pulse Assignment Id",
+    "qCardinal": 14004,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Assignments"
+    ]
+  },
+  {
+    "qName": "Pulse Assignment Key",
+    "qCardinal": 39633,
+    "qTags": [
+      "$ascii",
+      "$text",
+      "$key"
+    ],
+    "qSrcTables": [
+      "Assignments",
+      "Employee_Monthly"
+    ]
+  },
+  {
+    "qName": "Pulse Assignment MEDate",
+    "qCardinal": 196,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Assignments"
+    ]
+  },
+  {
+    "qName": "Pulse Assignment MSDate",
+    "qCardinal": 407,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Assignments"
+    ]
+  },
+  {
+    "qName": "Pulse Assignment SDate",
+    "qCardinal": 4145,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Assignments"
+    ]
+  },
+  {
+    "qName": "Pulse Assignment Status",
+    "qCardinal": 4,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Assignments"
+    ]
+  },
+  {
+    "qName": "Pulse Assignment Type",
+    "qCardinal": 1,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Assignments"
+    ]
+  },
+  {
+    "qName": "Pulse Business Group Id",
+    "qCardinal": 1,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Organizations"
+    ]
+  },
+  {
+    "qName": "Pulse Business Unit",
+    "qCardinal": 19,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Organizations"
+    ]
+  },
+  {
+    "qName": "Pulse Company",
+    "qCardinal": 13,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Organizations"
+    ]
+  },
+  {
+    "qName": "Pulse Competence Appraisal Status",
+    "qCardinal": 9,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Competence_Appraisals"
+    ]
+  },
+  {
+    "qName": "Pulse Competence Appraisals Key",
+    "qCardinal": 33517,
+    "qTags": [
+      "$ascii",
+      "$text",
+      "$key"
+    ],
+    "qSrcTables": [
+      "Employee_Monthly",
+      "Competence_Appraisals"
+    ]
+  },
+  {
+    "qName": "Pulse Country",
+    "qCardinal": 1,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Organizations"
+    ]
+  },
+  {
+    "qName": "Pulse Current Employee Flag",
+    "qCardinal": 2,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "People"
+    ]
+  },
+  {
+    "qName": "Pulse Date of Hire",
+    "qCardinal": 3689,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "People"
+    ]
+  },
+  {
+    "qName": "Pulse Disabled Flag",
+    "qCardinal": 3,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "People"
+    ]
+  },
+  {
+    "qName": "Pulse Division",
+    "qCardinal": 5,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Organizations"
+    ]
+  },
+  {
+    "qName": "Pulse EOM Termination Date",
+    "qCardinal": 78,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Assignments"
+    ]
+  },
+  {
+    "qName": "Pulse Effective Date",
+    "qCardinal": 58,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "Employee_Monthly"
+    ]
+  },
+  {
+    "qName": "Pulse Employee Number",
+    "qCardinal": 13514,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "People"
+    ]
+  },
+  {
+    "qName": "Pulse Enrollment Class SDate",
+    "qCardinal": 673,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "Enrollments"
+    ]
+  },
+  {
+    "qName": "Pulse Enrollment Id",
+    "qCardinal": 59599,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Enrollments"
+    ]
+  },
+  {
+    "qName": "Pulse Enrollment Key",
+    "qCardinal": 335840,
+    "qTags": [
+      "$ascii",
+      "$text",
+      "$key"
+    ],
+    "qSrcTables": [
+      "Employee_Monthly",
+      "Enrollments"
+    ]
+  },
+  {
+    "qName": "Pulse Enrollment Status",
+    "qCardinal": 12,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Enrollments"
+    ]
+  },
+  {
+    "qName": "Pulse Gender",
+    "qCardinal": 2,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "People"
+    ]
+  },
+  {
+    "qName": "Pulse Grade",
+    "qCardinal": 22,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Assignments"
+    ]
+  },
+  {
+    "qName": "Pulse Group",
+    "qCardinal": 1,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Organizations"
+    ]
+  },
+  {
+    "qName": "Pulse Group Engagement Date",
+    "qCardinal": 3745,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "People"
+    ]
+  },
+  {
+    "qName": "Pulse Group Tenure",
+    "qCardinal": 12137,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Employee_Monthly"
+    ]
+  },
+  {
+    "qName": "Pulse Group Termination Date",
+    "qCardinal": 1479,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "People"
+    ]
+  },
+  {
+    "qName": "Pulse Gulf Flag",
+    "qCardinal": 2,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Assignments"
+    ]
+  },
+  {
+    "qName": "Pulse Joined Flag",
+    "qCardinal": 2,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Employee_Monthly"
+    ]
+  },
+  {
+    "qName": "Pulse Joining Date",
+    "qCardinal": 3619,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Assignments"
+    ]
+  },
+  {
+    "qName": "Pulse Learner Access Flag",
+    "qCardinal": 2,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Enrollments"
+    ]
+  },
+  {
+    "qName": "Pulse Learner Access Type",
+    "qCardinal": 3,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Enrollments"
+    ]
+  },
+  {
+    "qName": "Pulse Nationality",
+    "qCardinal": 39,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "People"
+    ]
+  },
+  {
+    "qName": "Pulse Nationalization Category",
+    "qCardinal": 10,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Employee_Monthly"
+    ]
+  },
+  {
+    "qName": "Pulse Nationalization Flag",
+    "qCardinal": 2,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Employee_Monthly"
+    ]
+  },
+  {
+    "qName": "Pulse Nationalization Ratio",
+    "qCardinal": 4,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Employee_Monthly"
+    ]
+  },
+  {
+    "qName": "Pulse Organization Description",
+    "qCardinal": 23,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Organizations"
+    ]
+  },
+  {
+    "qName": "Pulse Organization Full Name",
+    "qCardinal": 2038,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Organizations"
+    ]
+  },
+  {
+    "qName": "Pulse Organization Id",
+    "qCardinal": 2077,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$key"
+    ],
+    "qSrcTables": [
+      "Assignments",
+      "Organizations"
+    ]
+  },
+  {
+    "qName": "Pulse Pay Scale Deviation",
+    "qCardinal": 3,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Salaries"
+    ]
+  },
+  {
+    "qName": "Pulse Person EDate",
+    "qCardinal": 1733,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "People"
+    ]
+  },
+  {
+    "qName": "Pulse Person Effective Key",
+    "qCardinal": 322400,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Employee_Monthly"
+    ]
+  },
+  {
+    "qName": "Pulse Person Id",
+    "qCardinal": 13512,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "People"
+    ]
+  },
+  {
+    "qName": "Pulse Person Key",
+    "qCardinal": 28361,
+    "qTags": [
+      "$ascii",
+      "$text",
+      "$key"
+    ],
+    "qSrcTables": [
+      "People",
+      "Employee_Monthly"
+    ]
+  },
+  {
+    "qName": "Pulse Person MEDate",
+    "qCardinal": 124,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "People"
+    ]
+  },
+  {
+    "qName": "Pulse Person MSDate",
+    "qCardinal": 409,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "People"
+    ]
+  },
+  {
+    "qName": "Pulse Person SDate",
+    "qCardinal": 4297,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "People"
+    ]
+  },
+  {
+    "qName": "Pulse Person Type",
+    "qCardinal": 10,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "People"
+    ]
+  },
+  {
+    "qName": "Pulse Person Type Category",
+    "qCardinal": 4,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "People"
+    ]
+  },
+  {
+    "qName": "Pulse Reporting Division",
+    "qCardinal": 5,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Organizations"
+    ]
+  },
+  {
+    "qName": "Pulse Salary Actual Amount",
+    "qCardinal": 3398,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Salaries"
+    ]
+  },
+  {
+    "qName": "Pulse Salary Id",
+    "qCardinal": 34914,
+    "qTags": [
+      "$ascii",
+      "$text",
+      "$key"
+    ],
+    "qSrcTables": [
+      "Employee_Monthly",
+      "Salaries"
+    ]
+  },
+  {
+    "qName": "Pulse Salary Nationalization Ratio",
+    "qCardinal": 692,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Salaries"
+    ]
+  },
+  {
+    "qName": "Pulse Security Division",
+    "qCardinal": 5,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Organizations"
+    ]
+  },
+  {
+    "qName": "Pulse Special Needs",
+    "qCardinal": 2,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "People"
+    ]
+  },
+  {
+    "qName": "Pulse Special Resident",
+    "qCardinal": 2,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "People"
+    ]
+  },
+  {
+    "qName": "Pulse Terminated Flag",
+    "qCardinal": 2,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Employee_Monthly"
+    ]
+  },
+  {
+    "qName": "Pulse Termination Date",
+    "qCardinal": 1384,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Assignments"
+    ]
+  },
+  {
+    "qName": "Pulse Turnover Category",
+    "qCardinal": 7,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "People"
+    ]
+  },
+  {
+    "qName": "Pulse Turnover Reason",
+    "qCardinal": 29,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "People"
+    ]
+  },
+  {
+    "qName": "Quarter",
+    "qCardinal": 4,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Master_Calendar"
+    ]
+  },
+  {
+    "qName": "Quarter ID",
+    "qCardinal": 24,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Master_Calendar"
+    ]
+  },
+  {
+    "qName": "Week",
+    "qCardinal": 23,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Master_Calendar"
+    ]
+  },
+  {
+    "qName": "Week Day",
+    "qCardinal": 7,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Master_Calendar"
+    ]
+  },
+  {
+    "qName": "Week Year",
+    "qCardinal": 70,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Master_Calendar"
+    ]
+  },
+  {
+    "qName": "Year",
+    "qCardinal": 6,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Master_Calendar"
+    ]
+  }
+]

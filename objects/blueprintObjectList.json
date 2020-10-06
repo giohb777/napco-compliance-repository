@@ -1,0 +1,90 @@
+{
+  "qInfos": [
+    {
+      "qId": "666dfba6-3d05-422a-84c7-1935511addfe",
+      "qType": "appprops",
+      "modifiedDate": "2020-08-05T11:09:06.328Z"
+    },
+    {
+      "qId": "6e48c045-b9df-43bd-a925-89362f307574",
+      "qType": "listbox"
+    },
+    {
+      "qId": "AQqcLv",
+      "qType": "table"
+    },
+    {
+      "qId": "CacbJe",
+      "qType": "kpi"
+    },
+    {
+      "qId": "JWfaq",
+      "qType": "filterpane"
+    },
+    {
+      "qId": "LoadModel",
+      "qType": "LoadModel"
+    },
+    {
+      "qId": "LxX",
+      "qType": "kpi"
+    },
+    {
+      "qId": "MFLhCU",
+      "qType": "kpi"
+    },
+    {
+      "qId": "PgNaEg",
+      "qType": "filterpane"
+    },
+    {
+      "qId": "PqPnJVn",
+      "qType": "kpi"
+    },
+    {
+      "qId": "TraXKMp",
+      "qType": "kpi"
+    },
+    {
+      "qId": "XmHbXUg",
+      "qType": "kpi"
+    },
+    {
+      "qId": "aGBKJ",
+      "qType": "text-image"
+    },
+    {
+      "qId": "dc0cbd12-2702-4c55-b765-69d70b8ac9be",
+      "qType": "listbox"
+    },
+    {
+      "qId": "f64fbd24-cb20-40d4-9088-8e8f72a58cba",
+      "qType": "sheet",
+      "modifiedDate": "2020-10-06T14:31:16.739Z"
+    },
+    {
+      "qId": "ff05b9fb-2c77-47ef-9a7c-d323ebee14b3",
+      "qType": "listbox"
+    },
+    {
+      "qId": "nLgyk",
+      "qType": "variable"
+    },
+    {
+      "qId": "pmJ",
+      "qType": "barchart"
+    },
+    {
+      "qId": "qKyJxxp",
+      "qType": "table"
+    },
+    {
+      "qId": "vRDkbE",
+      "qType": "filterpane"
+    },
+    {
+      "qId": "xaXzsr",
+      "qType": "barchart"
+    }
+  ]
+}

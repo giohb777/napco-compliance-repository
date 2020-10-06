@@ -1,0 +1,26 @@
+[
+  {
+    "qProperty": {
+      "qInfo": {
+        "qId": "666dfba6-3d05-422a-84c7-1935511addfe",
+        "qType": "appprops"
+      },
+      "qMetaDef": {},
+      "sheetTitleBgColor": {
+        "color": "#4478aa",
+        "index": -1
+      },
+      "sheetTitleGradientColor": "",
+      "sheetTitleColor": "#ffffff",
+      "sheetLogoThumbnail": {
+        "qStaticContentUrlDef": {
+          "qUrl": "/content/IFP Library/Powered By MIS.jpg"
+        }
+      },
+      "sheetLogoPosition": "",
+      "rtl": false,
+      "theme": "breeze"
+    },
+    "qChildren": []
+  }
+]
